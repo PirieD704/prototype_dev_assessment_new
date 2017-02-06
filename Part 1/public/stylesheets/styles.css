@@ -1,0 +1,12 @@
+.left-side-wrapper .image-wrapper img{
+	max-width: 100%;
+}
+.top-text-title {
+	font-family: 'Roboto';
+	font-size: 24px;
+	font-weight: bold;
+}
+.top-text-content {
+	font-family: 'Roboto';
+	font-size: 16px;
+}
