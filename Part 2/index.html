@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="assessmentApp">
+<html ng-app="cartApp" lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,10 +11,22 @@
     <!-- Tether CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/css/tether.min.css">
 
+    <!-- personal stylesheet -->
+    <link rel="stylesheet" href="public/stylesheets/styles.css">
+
   </head>
-  <body ng-controller="assessmentController">
-    {{test}}
-    
+  <body ng-controller="cartController as cart">
+    <div class="container">
+      <div class="prod-display-wrapper row">
+        <div class="prod-wrapper col-md-4" ng-repeat="product in cart.itemsArray">
+          <img src={{"_assets/product.image"}}>
+          <h4>{{product.title}}</h4>
+          <div class="prod-price">
+            {{product.price | currency}}
+          </div>
+        </div>
+      </div>
+    </div>    
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
