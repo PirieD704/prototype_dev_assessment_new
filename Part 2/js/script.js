@@ -1,6 +1,13 @@
 var app = angular.module("cartApp", []);
 app.controller("cartController", function($scope) {
-	this.itemsArray = storeItems.products; 
+	this.itemsArray = storeItems.products;
+	this.cartTotal = "0.00"
+	$scope.concatPath = function (param) {
+		console.log(param);
+		const newPath = "_assets/" + param;
+		console.log(newPath)
+		return newPath;
+	}
 });
 
 const storeItems = {
