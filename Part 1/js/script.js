@@ -16,6 +16,8 @@ $(document).ready(function () {
 	      }
 	  }
 	});
+	const innerWidth = window.innerWidth;
+	console.log(innerWidth);
 	const prevButton = document.querySelector(".owl-prev");
 	const nextButton = document.querySelector(".owl-next");
 	const navWrapper = document.querySelector(".owl-nav");

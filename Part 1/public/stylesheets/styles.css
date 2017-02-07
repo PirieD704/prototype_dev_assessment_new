@@ -14,17 +14,19 @@
     font-family: 'Roboto';
     font-size: 24px;
     font-weight: bold;
+    margin: 0px 25px;
 }
 .top-text-content {
     font-family: 'Roboto';
     font-size: 16px;
     padding-top: 16px;
+    margin: 0px 25px;
 }
 .quick-tip-wrapper {
     padding: 20px;
     background-color: #f2f2f2;
     border-radius: 5px;
-    margin-top: 32px;
+    margin: 32px 5px 0px;
 }
 .quick-tip-icon {
     padding: 0px;
