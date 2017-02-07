@@ -39,8 +39,12 @@
 /*Slider*/
 .owl-carousel {
     /*width: 145px;*/
-    /*margin: 0 auto;*/
+    /* margin: 0 auto; */
     text-align: center;
+}
+.prod-item {
+	margin: 0 auto;
+	width: 145px;
 }
 .prod-img img {
     width: 100%;
