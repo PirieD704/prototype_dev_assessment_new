@@ -1,12 +1,20 @@
 var app = angular.module("cartApp", []);
 app.controller("cartController", function($scope) {
 	this.itemsArray = storeItems.products;
-	this.cartTotal = "0.00"
+	let cartTotalVar = 0.00;
+	this.cartTotal = cartTotalVar;
+	this.categoryTitle = storeItems.category;
+	const priceVariable = document.querySelector('.cart-total-summary')
+
 	$scope.concatPath = function (param) {
-		console.log(param);
 		const newPath = "_assets/" + param;
-		console.log(newPath)
 		return newPath;
+	}
+	$scope.updateCart = function (item) {
+		cartTotalVar += Number(item.price);
+		priceVariable.innerHTML = `Total: $${cartTotalVar.toFixed(2)}`;
+		console.log(this);
+
 	}
 });
 

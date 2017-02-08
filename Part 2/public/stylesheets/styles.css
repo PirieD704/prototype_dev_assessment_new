@@ -4,17 +4,31 @@ body {
   padding: 15px;
 }
 /* line 26, ../../compass/sass/styles.sass */
-body .prod-title {
+body .store-content {
+  padding-top: 56px;
+  text-align: center;
+}
+/* line 29, ../../compass/sass/styles.sass */
+body .store-content .category-title {
+  font-weight: bold;
+  font-family: "Roboto";
+  font-size: 24px;
+}
+/* line 34, ../../compass/sass/styles.sass */
+body .store-content .prod-title {
   font-weight: bold;
   font-size: 20px;
   min-height: 60px;
 }
-/* line 30, ../../compass/sass/styles.sass */
-body .prod-price {
+/* line 38, ../../compass/sass/styles.sass */
+body .store-content .prod-price {
   font-size: 20px;
-  padding: 15px 15px 15px 30px;
+  padding: 15px 0px 15px 0px;
+  margin: auto;
 }
-/* line 33, ../../compass/sass/styles.sass */
-body .btn {
+/* line 42, ../../compass/sass/styles.sass */
+body .store-content .btn {
   border-radius: 100px;
+  margin: auto;
+  margin-bottom: 25px;
 }

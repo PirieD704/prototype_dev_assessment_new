@@ -22,11 +22,11 @@
 
   </head>
   <body ng-controller="cartController as cart">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar fixed-top navbar-light bg-faded">
       <div class="container">
         <ul class="nav justify-content-end">
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Total: {{cart.cartTotal | currency}}</a>
+            <a class="nav-link disabled cart-total-summary" href="#">Total: $0.00</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Cart <span class="fa fa-shopping-cart fa-lg"></span></a>
@@ -34,15 +34,20 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
+    <div class="container store-content">
+      <div class="category-title">
+        {{cart.categoryTitle}}
+      </div>
       <div class="prod-display-wrapper row">
         <div class="prod-wrapper col-xs-12 col-sm-6 col-md-4" ng-repeat="product in cart.itemsArray">
-          <img src={{concatPath(product.image)}}>
-          <div class="prod-title">{{product.title}}</div>
-          <div class="prod-price">
-            {{product.price | currency}}
+          <div class="product-shell">
+            <img src={{concatPath(product.image)}}>
+            <div class="prod-title">{{product.title}}</div>
+            <div class="prod-price">
+              {{product.price | currency}}
+            </div>
+            <button type="button" class="btn btn-primary" ng-click="updateCart(product)">Add to Cart</button>
           </div>
-          <button type="button" class="btn btn-primary">Add to Cart</button>
         </div>
       </div>
     </div>    

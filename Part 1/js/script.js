@@ -7,12 +7,12 @@ $(document).ready(function () {
 	      // breakpoint from 0 up
 	      0 : {
 	          items: 1,
-	          dots: true
+	          pagination: true
 	      },
 	      // breakpoint from 768 up
 	      768 : {
 	          items: 2,
-	          dots: false
+	          pagination: false
 	      }
 	  }
 	});
