@@ -4,17 +4,21 @@ app.controller("cartController", function($scope) {
 	let cartTotalVar = 0.00;
 	this.cartTotal = cartTotalVar;
 	this.categoryTitle = storeItems.category;
-	const priceVariable = document.querySelector('.cart-total-summary')
+	const priceVariable = document.querySelector('.cart-total-summary');
+  // To target the parent element in our dynamically created list of elements
+  const parent = document.querySelector('.parent');
 
+  // this is a little string manipulation to properly set the path necessary for finding the image as the object does not specify the parent file. This could be hard-coded into the object property but this way you wouldn't have to manually update tons of items if you were given a huge object
 	$scope.concatPath = function (param) {
 		const newPath = "_assets/" + param;
 		return newPath;
 	}
+  // this is the function run each time someone clicks an 'add to cart' button; handles all functionality for each product
 	$scope.updateCart = function (item) {
 		cartTotalVar += Number(item.price);
 		priceVariable.innerHTML = `Total: $${cartTotalVar.toFixed(2)}`;
-		console.log(this);
-
+    // remove the item from the dom after the total has been added to the cart
+    parent.children[this.$index].remove();
 	}
 });
 

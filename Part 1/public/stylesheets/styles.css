@@ -147,6 +147,7 @@
     opacity: 0.5;
 }
 
+/* media query for when the screen breaks to stacked grids */
 @media only screen and (max-width: 754px) {
     .right-content-wrapper {
       border: 1px #e5e5e5 solid;
